@@ -35,8 +35,11 @@ console.log('Il prezzo del viaggio è '+ discountedPrice.toFixed(2) );
 
 // 6.
 
-const discountMessage = (priceUnderage > 0 || priceAncient > 0) ? 'ma hai diritto ad uno sconto, perciò il prezzo finale è di € ' : '';
 
-document.getElementById ('discount').innerHTML = `
+if (priceUnderage > 0 || priceAncient > 0){
+  const discountMessage = 'ma hai diritto ad uno sconto, perciò il prezzo finale è di € ';
+  document.getElementById ('discount').innerHTML = `
  <h2> ${discountMessage} <strong> ${discountedPrice.toFixed(2)}! </strong> </h2>
  `
+}
+
