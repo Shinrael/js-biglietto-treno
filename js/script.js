@@ -14,7 +14,7 @@ console.log(kilometres, age, price);
 
 // 4.
 
-document.getElementById ('output').innerHTML += price
+document.getElementById ('output').innerHTML += price.toFixed(2);
 
 // 5.
 
@@ -33,8 +33,8 @@ const discountedPrice = price - priceUnderage - priceAncient;
 
 console.log('Il prezzo del viaggio è '+ discountedPrice.toFixed(2) );
 
-const discountMessage = (priceUnderage > 0 || priceAncient > 0) ? 'ma hai diritto ad uno sconto, perciò il prezzo finale è di' : '';
+const discountMessage = (priceUnderage > 0 || priceAncient > 0) ? 'ma hai diritto ad uno sconto, perciò il prezzo finale è di € ' : '';
 
 document.getElementById ('discount').innerHTML = `
- <h2> ${discountMessage} <strong> ${discountedPrice.toFixed(2)} €! </strong> </h2>
+ <h2> ${discountMessage} <strong> ${discountedPrice.toFixed(2)}! </strong> </h2>
  `
