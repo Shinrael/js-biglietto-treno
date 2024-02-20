@@ -18,19 +18,19 @@ document.getElementById ('output').innerHTML += price
 
 // 5.
 
-const priceUnderage = ''
-const priceAncient = ''
+let priceUnderage = ''
+let priceAncient = ''
 
-if (age > 18){
-  priceUnderage = ((price * 20) / 100);
+if (age < 18){
+  priceUnderage -= price * 0.2;
 } 
 
 if (age > 65){
-  priceAncient = ((price * 40) / 100);
+  priceAncient -= price * 0.4;
 }
 
-console.log(priceUnderage, priceAncient);
+console.log('Il prezzo del viaggio è '+ price.toFixed(2) );
 
-document.getElementById ('discount').innerHTML = `
-<h2> ma hai diritto ad uno sconto, perciò il prezzo finale è di <strong> ${}
-`
+// document.getElementById ('discount').innerHTML = `
+// <h2> ma hai diritto ad uno sconto, perciò il prezzo finale è di <strong> ${}
+// `
