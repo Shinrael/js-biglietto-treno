@@ -22,14 +22,16 @@ let priceUnderage = ''
 let priceAncient = ''
 
 if (age < 18){
-  priceUnderage -= price * 0.2;
+  priceUnderage = price * 0.2;
 } 
 
 if (age > 65){
-  priceAncient -= price * 0.4;
+  priceAncient = price * 0.4;
 }
 
-console.log('Il prezzo del viaggio è '+ price.toFixed(2) );
+const discountedPrice = price - priceUnderage - priceAncient;
+
+console.log('Il prezzo del viaggio è '+ discountedPrice.toFixed(2) );
 
 // document.getElementById ('discount').innerHTML = `
 // <h2> ma hai diritto ad uno sconto, perciò il prezzo finale è di <strong> ${}
